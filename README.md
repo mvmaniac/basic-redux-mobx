@@ -14,11 +14,25 @@
 
 ### 4. Setting
 
-* react & redux  
+* react & redux & react-hot-loader
 
     ``` javascript
     npm i react react-dom react-redux
     npm i redux
+    npm i react-hot-loader
+    ```
+
+* babel
+  
+    ``` javascript
+    npm i -D @babel/core @babel/preset-env @babel/preset-react
+    npm i -D babel-loader
+    ```
+
+* webpack
+
+    ``` javascript
+    npm i -D webpack webpack-cli webpack-dev-server
     ```
 
 * eslint & prettier
