@@ -1,4 +1,5 @@
 import {createStore, compose, applyMiddleware} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
 import reducer from './reducers';
 
 const initialState = {
@@ -21,7 +22,11 @@ const thunkMiddleware = (store) => (next) => (action) => {
   return next(action); // 동기
 };
 
-const enhancer = compose(applyMiddleware(firstMiddleware, thunkMiddleware));
+const enhancer =
+  process.env.NODE_ENV === 'production'
+    ? compose(applyMiddleware(firstMiddleware, thunkMiddleware))
+    : composeWithDevTools(applyMiddleware(firstMiddleware, thunkMiddleware));
+
 const store = createStore(reducer, initialState, enhancer);
 
 export default store;

@@ -5,7 +5,6 @@ import {logIn, logOut} from './actions/user';
 
 const App = () => {
   const user = useSelector((state) => state.userReducer);
-  const post = useSelector((state) => state.postReducer);
   const dispatch = useDispatch();
 
   const onClick = useCallback(() => {
@@ -24,7 +23,7 @@ const App = () => {
   const nickname = user.data ? (
     <div>{user.data.nickname}</div>
   ) : (
-    '로그인 해주세요.'
+    <div>로그인 해주세요.</div>
   );
 
   return (

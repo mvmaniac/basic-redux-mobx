@@ -14,13 +14,29 @@
 
 ### 4. Setting
 
-* react & redux & react-hot-loader
+* redux  
+  
+    ``` javascript
+    npm i redux
+    ```
 
+* react
+  
     ``` javascript
     npm i react react-dom react-redux
-    npm i redux
-    npm i react-hot-loader
     ```
+
+* react-hot-loader & redux-devtools-extension
+  
+    ``` javascript
+    npm i react-hot-loader redux-devtools-extension
+    ```
+
+* immer
+  
+  ``` javascript
+  npm i immer
+  ```
 
 * babel
   
@@ -35,7 +51,16 @@
     npm i -D webpack webpack-cli webpack-dev-server
     ```
 
-* eslint & prettier
+* eslint & prettier with js
+  
+    ``` javascript
+    npm i -D eslint
+    npm i -D eslint-config-airbnb-base eslint-plugin-import
+    npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+    npm i -D babel-eslint
+    ```
+
+* eslint & prettier with react
   
     ``` javascript
     npm i -D eslint

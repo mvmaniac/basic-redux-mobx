@@ -10,11 +10,13 @@
   "author": "YHS",
   "license": "MIT",
   "dependencies": {
+    "immer": "^6.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.20",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
