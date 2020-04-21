@@ -20,6 +20,12 @@
     npm i redux
     ```
 
+* mobx  
+  
+    ``` javascript
+    npm i mobx
+    ```
+
 * react
   
     ``` javascript
