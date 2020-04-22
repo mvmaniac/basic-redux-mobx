@@ -18,24 +18,21 @@
   
     ``` javascript
     npm i redux
+    npm i react-redux redux-devtools-extension
     ```
 
 * mobx  
   
     ``` javascript
     npm i mobx
+    npm i mobx-react
     ```
 
 * react
   
     ``` javascript
-    npm i react react-dom react-redux
-    ```
-
-* react-hot-loader & redux-devtools-extension
-  
-    ``` javascript
-    npm i react-hot-loader redux-devtools-extension
+    npm i react react-dom
+    npm i react-hot-loader
     ```
 
 * immer
@@ -49,6 +46,7 @@
     ``` javascript
     npm i -D @babel/core @babel/preset-env @babel/preset-react
     npm i -D babel-loader
+    npm i -D @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties
     ```
 
 * webpack
