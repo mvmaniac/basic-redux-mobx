@@ -43,7 +43,7 @@ class AppClass extends Component {
 
     return (
       <div>
-        {userStore.isLoggingIn ? <div>로그인 중</div> : nickname}
+        {userStore.isLoggingIn ? <div>로그인 중 - Class</div> : nickname}
 
         {!userStore.data ? (
           <button type="button" onClick={this.onLogin}>
