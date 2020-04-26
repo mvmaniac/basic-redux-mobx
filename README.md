@@ -1,4 +1,4 @@
-# Basic Redux Mobx
+# Basic Redux & Mobx
 
 ### 1. Redux vs MobX (둘 다 배우자!) 강의 실습 예제 기반
 
