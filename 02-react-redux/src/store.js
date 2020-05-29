@@ -3,11 +3,11 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import reducer from './reducers';
 
 const initialState = {
-  user: {
+  userReducer: {
     isLoggingIn: false,
     data: null
   },
-  posts: []
+  postReducer: []
 };
 
 const firstMiddleware = (store) => (next) => (action) => {
