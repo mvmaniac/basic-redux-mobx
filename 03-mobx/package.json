@@ -9,7 +9,7 @@
   "author": "YHS",
   "license": "MIT",
   "dependencies": {
-    "mobx": "^5.15.4"
+    "mobx": "^6.0.1"
   },
   "devDependencies": {}
 }
