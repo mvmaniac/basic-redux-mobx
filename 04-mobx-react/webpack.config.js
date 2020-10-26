@@ -1,5 +1,6 @@
 const path = require('path');
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -33,9 +34,9 @@ module.exports = {
                 '@babel/preset-react'
               ],
               plugins: [
-                'react-hot-loader/babel',
                 ['@babel/plugin-proposal-decorators', {legacy: true}],
-                ['@babel/plugin-proposal-class-properties', {loose: true}]
+                ['@babel/plugin-proposal-class-properties', {loose: true}],
+                'react-refresh/babel'
               ]
             }
           }
@@ -46,10 +47,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    new ReactRefreshWebpackPlugin()
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
   devServer: {

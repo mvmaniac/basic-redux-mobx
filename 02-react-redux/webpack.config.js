@@ -1,5 +1,6 @@
 const path = require('path');
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -32,7 +33,7 @@ module.exports = {
                 ],
                 '@babel/preset-react'
               ],
-              plugins: ['react-hot-loader/babel']
+              plugins: ['react-refresh/babel']
             }
           }
         ]
@@ -42,10 +43,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    new ReactRefreshWebpackPlugin()
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
   devServer: {
