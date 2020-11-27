@@ -1,7 +1,10 @@
 const path = require('path');
 
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -27,8 +30,7 @@ module.exports = {
                   {
                     targets: {
                       browsers: ['defaults']
-                    },
-                    debug: true
+                    }
                   }
                 ],
                 '@babel/preset-react'
@@ -41,16 +43,22 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
+    new ESLintPlugin({
+      extensions: ['.jsx', '.js']
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
     new ReactRefreshWebpackPlugin()
   ],
   output: {
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
   devServer: {
+    publicPath: '/',
     port: 8080,
     hot: true
   }
