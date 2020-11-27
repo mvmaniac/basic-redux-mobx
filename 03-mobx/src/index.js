@@ -10,11 +10,14 @@ autorun(() => {
   console.log('autorun changed', state.compA);
 });
 
-reaction(() => {
-  return state.compB;
-}, () => {
-  console.log('reaction change compB')
-});
+reaction(
+  () => {
+    return state.compB;
+  },
+  () => {
+    console.log('reaction change compB');
+  }
+);
 
 const change = action(() => {
   state.compA = 'action for change compA';

@@ -7,27 +7,27 @@ const AppHooks = () => {
   const state = useLocalStore(() => ({
     name: '',
     password: '',
-    onChangeName(e) {
-      this.name = e.target.value;
+    onChangeName(event) {
+      this.name = event.target.value;
     },
-    onChangePassword(e) {
-      this.password = e.target.value;
+    onChangePassword(event) {
+      this.password = event.target.value;
     }
   }));
 
   const onLogin = useCallback(() => {
     userStore.logIn({
-      name: 'dev',
-      password: '1234'
+      name: state.name,
+      password: state.password
     });
-  }, []);
+  }, [state.name, state.password]);
 
   const onLogout = useCallback(() => {
     userStore.logOut();
   }, []);
 
   const nickname = userStore.data ? (
-    <div>{userStore.data.name}</div>
+    <div>{`${userStore.data.name} / ${userStore.data.password}`}</div>
   ) : (
     <div>로그인 해주세요.</div>
   );

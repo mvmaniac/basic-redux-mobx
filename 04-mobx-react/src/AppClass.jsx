@@ -15,9 +15,10 @@ class AppClass extends Component {
   }
 
   onLogin = () => {
+    const {name, password} = this.state;
     userStore.logIn({
-      name: 'dev',
-      password: '1234'
+      name,
+      password
     });
   };
 
@@ -25,18 +26,18 @@ class AppClass extends Component {
     userStore.logOut();
   };
 
-  onChangeName = (e) => {
-    this.state.name = e.target.value;
+  onChangeName = (event) => {
+    this.state.name = event.target.value;
   };
 
-  onChangePassword = (e) => {
-    this.state.password = e.target.value;
+  onChangePassword = (event) => {
+    this.state.password = event.target.value;
   };
 
   render() {
     const {name, password} = this.state;
     const nickname = userStore.data ? (
-      <div>{userStore.data.name}</div>
+      <div>{`${userStore.data.nickname} / ${userStore.data.password}`}</div>
     ) : (
       <div>로그인 해주세요.</div>
     );

@@ -14,11 +14,11 @@ const App = () => {
         password: '비밀번호'
       })
     );
-  }, []);
+  }, [dispatch]);
 
   const onLogout = useCallback(() => {
     dispatch(logOut());
-  }, []);
+  }, [dispatch]);
 
   const nickname = user.data ? (
     <div>{user.data.nickname}</div>
