@@ -5,8 +5,8 @@ const initialState = {
   data: null
 };
 
-const userReducer = (prevState = initialState, action) => {
-  return produce(prevState, (draftState) => {
+const userReducer = (prevState = initialState, action) =>
+  produce(prevState, (draftState) => {
     switch (action.type) {
       case 'LOG_IN_REQUEST': {
         const draft = draftState;
@@ -42,6 +42,5 @@ const userReducer = (prevState = initialState, action) => {
       default:
     }
   });
-};
 
 export default userReducer;

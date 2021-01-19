@@ -1,9 +1,7 @@
-const addPost = (data) => {
-  return {
-    type: 'ADD_POST',
-    data
-  };
-};
+const addPost = (data) => ({
+  type: 'ADD_POST',
+  data
+});
 
 export {addPost};
 

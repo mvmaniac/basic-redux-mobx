@@ -1,27 +1,21 @@
-const logInRequest = (data) => {
-  return {
-    type: 'LOG_IN_REQUEST',
-    data
-  };
-};
+const logInRequest = (data) => ({
+  type: 'LOG_IN_REQUEST',
+  data
+});
 
-const logInSuccess = (data) => {
-  return {
-    type: 'LOG_IN_SUCCESS',
-    data
-  };
-};
+const logInSuccess = (data) => ({
+  type: 'LOG_IN_SUCCESS',
+  data
+});
 
-const logInFailure = (error) => {
-  return {
-    type: 'LOG_IN_FAILURE',
-    error
-  };
-};
+const logInFailure = (error) => ({
+  type: 'LOG_IN_FAILURE',
+  error
+});
 
-const logIn = (data) => {
+const logIn = (data) =>
   // async action creator
-  return (dispatch, getState) => {
+  (dispatch, getState) => {
     // async action
     dispatch(logInRequest(data));
     try {
@@ -38,12 +32,8 @@ const logIn = (data) => {
       dispatch(logInFailure(e));
     }
   };
-};
-
-const logOut = () => {
-  return {
-    type: 'LOG_OUT'
-  };
-};
+const logOut = () => ({
+  type: 'LOG_OUT'
+});
 
 export {logIn, logOut};

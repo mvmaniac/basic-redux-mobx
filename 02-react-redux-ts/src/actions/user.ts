@@ -12,30 +12,24 @@ import {
 } from '../types/user';
 import {addPost} from './post';
 
-const logInRequest = (data: LogInRequest): LogInRequestAction => {
-  return {
-    type: LOG_IN_REQUEST,
-    data
-  };
-};
+const logInRequest = (data: LogInRequest): LogInRequestAction => ({
+  type: LOG_IN_REQUEST,
+  data
+});
 
-const logInSuccess = (data: LogInSuccess): LogInSuccessAction => {
-  return {
-    type: LOG_IN_SUCCESS,
-    data
-  };
-};
+const logInSuccess = (data: LogInSuccess): LogInSuccessAction => ({
+  type: LOG_IN_SUCCESS,
+  data
+});
 
-const logInFailure = (error: Error): LogInFailureAction => {
-  return {
-    type: LOG_IN_FAILURE,
-    error
-  };
-};
+const logInFailure = (error: Error): LogInFailureAction => ({
+  type: LOG_IN_FAILURE,
+  error
+});
 
-export const logIn = (data: LogInRequest): ThunkAction => {
+export const logIn = (data: LogInRequest): ThunkAction =>
   // async action creator
-  return (dispatch) => {
+  (dispatch) => {
     // async action
     dispatch(logInRequest(data));
     try {
@@ -54,10 +48,7 @@ export const logIn = (data: LogInRequest): ThunkAction => {
       dispatch(logInFailure(error));
     }
   };
-};
 
-export const logOut = (): LogOutAction => {
-  return {
-    type: LOG_OUT
-  };
-};
+export const logOut = (): LogOutAction => ({
+  type: LOG_OUT
+});
