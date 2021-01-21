@@ -4,7 +4,10 @@ import {logIn} from '../actions/user';
 
 const initialState = {
   isLoggingIn: false,
-  data: null
+  data: null,
+  prices: Array(100)
+    .fill()
+    .map((value, index) => (index + 1) * 100)
 };
 
 const userSlice = createSlice({

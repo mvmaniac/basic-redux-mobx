@@ -28,7 +28,7 @@ const postSlice = createSlice({
       // 공통 처리
       // pending 포함된 action type 인 경우 state의 isLoading 값을 true로 함
       .addMatcher(
-        (action) => action.type.inclue('/pending'),
+        (action) => action.type.includes('/pending'),
         (state) => {
           const draft = state;
           draft.isLoading = true;
