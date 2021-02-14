@@ -16,11 +16,16 @@
 
 ### 4. Setting
 
+- redux-toolkit (redux, redux-devtools-extension, immer를 따로 설치할 필요 없음, 내장되어 있음)
+
+  ```javascript
+  npm i react-redux @reduxjs/toolkit
+  ```
+
 - redux
 
   ```javascript
-  npm i redux
-  npm i react-redux redux-devtools-extension
+  npm i react-redux redux redux-devtools-extension
   ```
 
 - mobx
@@ -79,7 +84,7 @@
 
   ```javascript
   npm i -D @babel/core @babel/preset-env @babel/preset-react
-  npm i -D babel-loader babel-eslint
+  npm i -D babel-loader
   ```
 
 - eslint with js & prettier
