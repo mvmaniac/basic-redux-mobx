@@ -1,5 +1,5 @@
 {
-  "name": "redux",
+  "name": "mobx",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
@@ -9,7 +9,7 @@
   "author": "YHS",
   "license": "MIT",
   "dependencies": {
-    "redux": "^4.0.5"
+    "mobx": "^6.1.6"
   },
   "devDependencies": {
     "eslint": "^7.20.0",
