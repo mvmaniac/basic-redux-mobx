@@ -16,6 +16,7 @@ module.exports = {
   entry: {
     app: './src/client'
   },
+  target: ['web', 'es5'],
   module: {
     rules: [
       {
