@@ -6,16 +6,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-module.exports = {
-  mode: 'development',
-  devtool: 'eval-cheap-source-map',
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
+let config = {
+  mode: process.env.NODE_ENV || 'development',
+  devtool: process.env.NODE_ENV ? 'hidden-source-map' : 'eval-cheap-source-map',
   resolve: {
     extensions: ['.jsx', '.js']
   },
   entry: {
     app: './src/client'
   },
-  target: ['web', 'es5'],
   module: {
     rules: [
       {
@@ -25,22 +26,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    targets: {
-                      browsers: ['defaults']
-                    }
-                  }
-                ],
-                '@babel/preset-react'
-              ],
-              plugins: [
-                ['@babel/plugin-proposal-decorators', {legacy: true}],
-                ['@babel/plugin-proposal-class-properties', {loose: true}],
-                'react-refresh/babel'
-              ]
+              plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean)
             }
           }
         ]
@@ -55,11 +41,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new ReactRefreshWebpackPlugin()
-  ],
+    isDevelopment && new ReactRefreshWebpackPlugin()
+  ].filter(Boolean),
   output: {
     publicPath: '/',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
   devServer: {
@@ -68,3 +54,9 @@ module.exports = {
     hot: true
   }
 };
+
+if (!isDevelopment) {
+  config = {...config, target: ['web', 'es5']};
+}
+
+module.exports = config;

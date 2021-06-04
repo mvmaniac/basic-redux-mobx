@@ -1,13 +1,13 @@
 {
+  "extends": "./tsconfig-base",
   "compilerOptions": {
-    "strict": true,
-    "target": "ES2015",
-    "lib": ["ES2020", "DOM"],
     "outDir": "dist",
     "jsx": "react",
-    "moduleResolution": "Node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true // mobx-react 에서 해당 옵션을 켜고 했기 때문에 옵션을 넣음
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "experimentalDecorators": true
   },
-  "include": ["src/**/*.tsx", "src/**/*.ts", "webpack.config.js"]
+  "include": ["src/**/*", "webpack.config.ts", "babel.config.js"],
+  "exclude": ["node_modules"]
 }
