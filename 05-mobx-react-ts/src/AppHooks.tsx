@@ -17,18 +17,21 @@ const AppHooks = (): JSX.Element => {
     name: '',
     password: '',
     // action으로 함수를 감쌀 때 화살표 함수 아닌 그냥 함수로 해도 됨
-    onChangeName: action(function onChangeName(
-      this: LocalStore,
-      event: React.ChangeEvent<HTMLInputElement>
-    ): void {
-      state.name = event.target.value;
-    }),
-    onChangePassword: action(function onChangePassword(
-      this: LocalStore,
-      event: React.ChangeEvent<HTMLInputElement>
-    ) {
-      state.password = event.target.value;
-    })
+    onChangeName: action(
+      // eslint-disable-next-line prefer-arrow-callback
+      function (
+        this: LocalStore,
+        event: React.ChangeEvent<HTMLInputElement>
+      ): void {
+        state.name = event.target.value;
+      }
+    ),
+    onChangePassword: action(
+      // eslint-disable-next-line prefer-arrow-callback
+      function (this: LocalStore, event: React.ChangeEvent<HTMLInputElement>) {
+        state.password = event.target.value;
+      }
+    )
   }));
 
   const onLogin = useCallback(() => {

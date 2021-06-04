@@ -13,7 +13,8 @@ const logInFailure = (error) => ({
   error
 });
 
-const logIn = (data) =>
+const logIn =
+  (data) =>
   // async action creator
   (dispatch, getState) => {
     // async action

@@ -27,7 +27,8 @@ const logInFailure = (error: Error): LogInFailureAction => ({
   error
 });
 
-export const logIn = (data: LogInRequest): ThunkAction =>
+export const logIn =
+  (data: LogInRequest): ThunkAction =>
   // async action creator
   (dispatch) => {
     // async action

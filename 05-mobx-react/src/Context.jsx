@@ -7,8 +7,8 @@ export const storeContext = React.createContext({
 });
 
 // eslint-disable-next-line react/prop-types
-const StoreProvider = ({children}) => {
-  return <storeContext.Provider>{children}</storeContext.Provider>;
-};
+const StoreProvider = ({children}) => (
+  <storeContext.Provider>{children}</storeContext.Provider>
+);
 
 export default StoreProvider;
