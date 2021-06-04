@@ -47,31 +47,37 @@
   npm i -D react-refresh
   ```
 
-  - react refresh with webpack5
+- react refresh with webpack5, babel-loader
 
   ```javascript
   npm i -D react-refresh @pmmmwh/react-refresh-webpack-plugin
   ```
 
-- react refresh with webpack5, typescript
+- react refresh with webpack5, ts-loader
 
   ```javascript
-  npm i -D react-refresh @pmmmwh/react-refresh-webpack-plugin react-refresh-typescript
+  npm i -D react-refresh @pmmmwh/react-refresh-webpack-plugin
+  npm i -D react-refresh-typescript
   ```
 
 - webpack5
 
   ```javascript
-  npm i -D webpack webpack-cli webpack-dev-server
+  npm i -D webpack webpack-cli webpack-merge webpack-dev-server
   npm i -D clean-webpack-plugin eslint-webpack-plugin
-  npm i -D html-webpack-plugin
+  npm i -D babel-loader core-js
   ```
 
 - webpack5 with typescript
 
+  .ts 파일로 작성 할 경우 ts-node가 필요함
+  babel-loader or ts-loader 둘 중에 하나 선택 (예제는 babel-loader 기준)
+
   ```javascript
-  npm i -D webpack webpack-cli webpack-dev-server
+  npm i -D webpack webpack-cli webpack-merge webpack-dev-server
   npm i -D clean-webpack-plugin fork-ts-checker-webpack-plugin
+  npm i -D babel-loader core-js
+  npm i -D ts-node
   ```
 
 - immer
@@ -101,6 +107,7 @@
   npm i -D eslint
   npm i -D eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
   npm i -D prettier eslint-config-prettier
+  npm i -D @babel/eslint-parser
   ```
 
 - eslint with react, typescript & prettier
@@ -109,13 +116,20 @@
   npm i -D eslint
   npm i -D eslint-config-airbnb-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
   npm i -D prettier eslint-config-prettier
+  npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
   ```
 
-- typescript
+- babel
 
   ```javascript
-  npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
-  npm i -D ts-loader
+  npm i -D @babel/core @babel/preset-env @babel/preset-react
+  ```
+
+- babel with typescript (without ts-loader)
+
+  ```javascript
+  npm i -D @babel/core @babel/preset-env @babel/preset-react
+  npm i -D @babel/preset-typescript
   ```
 
 - types
