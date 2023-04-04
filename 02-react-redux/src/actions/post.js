@@ -3,6 +3,6 @@ const addPost = (data) => ({
   data
 });
 
-export {addPost};
+export { addPost };
 
 export default {};

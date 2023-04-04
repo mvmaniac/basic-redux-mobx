@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {useCallback} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import { useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import {logIn, logOut} from './actions/user';
-import {RootState} from './reducers';
-import {UserState} from './types/user';
+import { logIn, logOut } from './actions/user';
+import { RootState } from './reducers';
+import { UserState } from './types/user';
 
-const App = (): JSX.Element => {
+function App(): JSX.Element {
   const user = useSelector<RootState, UserState>((state) => state.userReducer);
   const dispatch = useDispatch();
 
@@ -43,6 +43,6 @@ const App = (): JSX.Element => {
       )}
     </div>
   );
-};
+}
 
 export default App;

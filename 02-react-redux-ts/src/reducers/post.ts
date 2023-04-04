@@ -1,9 +1,10 @@
 import produce from 'immer';
-import {ADD_POST, AddPostAction} from '../types/post';
+import { ADD_POST, AddPostAction } from '../types/post';
 
 const initialState: string[] = [];
 
 const postReducer = (
+  // eslint-disable-next-line @typescript-eslint/default-param-last
   prevState = initialState,
   action: AddPostAction
 ): string[] =>

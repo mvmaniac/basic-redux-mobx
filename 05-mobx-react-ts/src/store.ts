@@ -1,5 +1,5 @@
-import {observable, action} from 'mobx';
-import {UserStore, User, PostStore} from './types/types';
+import { observable, action } from 'mobx';
+import { UserStore, User, PostStore } from './types/types';
 
 const postStore = observable<PostStore>({
   data: [],
@@ -24,4 +24,4 @@ const userStore = observable<UserStore>({
   })
 });
 
-export {userStore, postStore};
+export { userStore, postStore };

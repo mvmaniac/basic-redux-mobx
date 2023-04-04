@@ -1,5 +1,5 @@
-import {createStore, compose, applyMiddleware} from 'redux';
-import {composeWithDevTools} from 'redux-devtools-extension';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from './reducers';
 
 const initialState = {

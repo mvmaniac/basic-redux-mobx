@@ -1,8 +1,8 @@
 import React from 'react';
-import {storeContext} from './Context';
+import { storeContext } from './Context';
 
 function useUserStore() {
-  const {userStore} = React.useContext(storeContext);
+  const { userStore } = React.useContext(storeContext);
   return userStore;
 }
 

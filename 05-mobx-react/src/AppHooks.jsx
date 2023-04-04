@@ -1,7 +1,7 @@
-import React, {useCallback} from 'react';
-import {useObserver, useLocalStore} from 'mobx-react';
+import React, { useCallback } from 'react';
+import { useObserver, useLocalStore } from 'mobx-react';
 
-import {userStore, postStore} from './store';
+import { userStore, postStore } from './store';
 
 const AppHooks = () => {
   const state = useLocalStore(() => ({

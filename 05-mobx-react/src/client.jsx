@@ -1,13 +1,15 @@
 import React from 'react';
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import AppClass from './AppClass';
 import AppHooks from './AppHooks';
 import StoreProvider from './Context';
 
-render(
-  // <StoreProvider>
-  <AppHooks />,
-  // </StoreProvider>,
-  document.querySelector('#root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <StoreProvider>
+      <AppHooks />
+    </StoreProvider>
+  </React.StrictMode>
 );

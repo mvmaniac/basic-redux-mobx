@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {useCallback} from 'react';
-import {action} from 'mobx';
-import {useObserver, useLocalStore} from 'mobx-react';
+import { useCallback } from 'react';
+import { action } from 'mobx';
+import { useObserver, useLocalStore } from 'mobx-react';
 
-import {userStore, postStore} from './store';
+import { userStore, postStore } from './store';
 
 interface LocalStore {
   name: string;

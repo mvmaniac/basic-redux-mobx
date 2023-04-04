@@ -1,4 +1,4 @@
-import {createAsyncThunk} from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const delay = (time, value) =>
   new Promise((resolve, reject) => {
@@ -14,5 +14,5 @@ const addPost = createAsyncThunk('post/add', async () => {
   });
 });
 
-export {addPost};
+export { addPost };
 export default {};

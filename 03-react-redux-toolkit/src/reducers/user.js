@@ -1,6 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-import {logIn} from '../actions/user';
+import { logIn } from '../actions/user';
 
 const initialState = {
   isLoggingIn: false,

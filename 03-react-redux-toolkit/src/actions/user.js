@@ -1,4 +1,4 @@
-import {createAsyncThunk} from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const delay = (time, value) =>
   new Promise((resolve, reject) => {
@@ -22,5 +22,5 @@ const logIn = createAsyncThunk('user/logIn', async (data, thunkAPI) => {
   return result;
 });
 
-export {logIn};
+export { logIn };
 export default {};

@@ -1,4 +1,4 @@
-const {observable} = require('mobx');
+const { observable } = require('mobx');
 
 const postStore = observable({
   data: [],
@@ -23,4 +23,4 @@ const userStore = observable({
   }
 });
 
-export {userStore, postStore};
+export { userStore, postStore };

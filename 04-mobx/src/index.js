@@ -1,4 +1,4 @@
-const {observable, autorun, reaction, action, runInAction} = require('mobx');
+const { observable, autorun, reaction, action, runInAction } = require('mobx');
 
 const state = observable({
   compA: 'A',
@@ -11,9 +11,7 @@ autorun(() => {
 });
 
 reaction(
-  () => {
-    return state.compB;
-  },
+  () => state.compB,
   () => {
     console.log('reaction change compB');
   }

@@ -14,6 +14,7 @@ const initialState: UserState = {
 };
 
 const userReducer = (
+  // eslint-disable-next-line @typescript-eslint/default-param-last
   prevState = initialState,
   action: UserReducerAction
 ): UserState =>

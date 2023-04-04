@@ -1,4 +1,4 @@
-import {ADD_POST, AddPostAction} from '../types/post';
+import { ADD_POST, AddPostAction } from '../types/post';
 
 export const addPost = (data: string): AddPostAction => ({
   type: ADD_POST,

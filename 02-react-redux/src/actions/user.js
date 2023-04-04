@@ -37,4 +37,4 @@ const logOut = () => ({
   type: 'LOG_OUT'
 });
 
-export {logIn, logOut};
+export { logIn, logOut };

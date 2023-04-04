@@ -5,6 +5,7 @@ const initialState = {
   data: null
 };
 
+// eslint-disable-next-line default-param-last
 const userReducer = (prevState = initialState, action) =>
   produce(prevState, (draftState) => {
     switch (action.type) {

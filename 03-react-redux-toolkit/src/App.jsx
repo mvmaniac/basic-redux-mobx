@@ -1,9 +1,9 @@
-import React, {useCallback, useMemo} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {createSelector} from '@reduxjs/toolkit';
+import React, { useCallback, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { createSelector } from '@reduxjs/toolkit';
 
-import {logIn} from './actions/user';
-import {addPost} from './actions/post';
+import { logIn } from './actions/user';
+import { addPost } from './actions/post';
 
 import userSlice from './reducers/user';
 
@@ -22,7 +22,7 @@ const outside = (dispatch) => () => {
   );
 };
 
-const App = () => {
+function App() {
   // 왠만해서는 useSelector를 통해 반환되는 값은 객체가 아닌 원시값으로 풀어서 반환하는게 좋음
   // const email = useSelector((state) => state.userReducer.email);
   // const password = useSelector((state) => state.userReducer.password);
@@ -99,6 +99,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;

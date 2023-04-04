@@ -1,9 +1,9 @@
-import React, {useCallback} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import {logIn, logOut} from './actions/user';
+import { logIn, logOut } from './actions/user';
 
-const App = () => {
+function App() {
   const user = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
 
@@ -40,6 +40,6 @@ const App = () => {
       )}
     </div>
   );
-};
+}
 
 export default App;

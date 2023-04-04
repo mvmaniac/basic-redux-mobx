@@ -1,4 +1,4 @@
-const {createStore} = require('redux');
+const { createStore } = require('redux');
 
 const reducer = (prevState, action) => {
   switch (action.type) {
@@ -33,8 +33,8 @@ const store = createStore(reducer, initialState);
 store.subscribe(() => console.log(store.getState()));
 
 // action
-const changeComp = (type, data) => ({type, data});
+const changeComp = (type, data) => ({ type, data });
 
 store.dispatch(changeComp('CHANGE_COMP_A', 'b'));
 store.dispatch(changeComp('CHANGE_COMP_B', 11));
-store.dispatch({type: 'CHANGE_COMP_C', data: undefined});
+store.dispatch({ type: 'CHANGE_COMP_C', data: undefined });

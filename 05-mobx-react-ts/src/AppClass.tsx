@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {Component} from 'react';
-import {observable} from 'mobx';
-import {observer} from 'mobx-react';
+import { Component } from 'react';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 
-import {userStore, postStore} from './store';
+import { userStore, postStore } from './store';
 
 interface State {
   name: string;
@@ -42,7 +42,7 @@ class AppClass extends Component<Record<string, unknown>, State> {
   };
 
   render(): JSX.Element {
-    const {name, password} = this.state;
+    const { name, password } = this.state;
     const nickname = userStore.data ? (
       <div>{userStore.data.nickname}</div>
     ) : (

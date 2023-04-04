@@ -1,6 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-import {addPost} from '../actions/post';
+import { addPost } from '../actions/post';
 
 const initialState = {
   data: []

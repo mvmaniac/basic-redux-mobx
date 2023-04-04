@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {observable} from 'mobx';
-import {observer} from 'mobx-react';
+import React, { Component } from 'react';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 
-import {userStore, postStore} from './store';
+import { userStore, postStore } from './store';
 
 @observer
 class AppClass extends Component {
@@ -15,13 +15,14 @@ class AppClass extends Component {
   }
 
   onLogin = () => {
-    const {name, password} = this.state;
+    const { name, password } = this.state;
     userStore.logIn({
       name,
       password
     });
   };
 
+  // eslint-disable-next-line class-methods-use-this
   onLogout = () => {
     userStore.logOut();
   };
@@ -35,7 +36,7 @@ class AppClass extends Component {
   };
 
   render() {
-    const {name, password} = this.state;
+    const { name, password } = this.state;
     const nickname = userStore.data ? (
       <div>{`${userStore.data.nickname} / ${userStore.data.password}`}</div>
     ) : (
