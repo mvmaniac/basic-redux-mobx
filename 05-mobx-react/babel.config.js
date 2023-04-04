@@ -4,15 +4,15 @@ const presets = [
     {
       targets: 'defaults',
       useBuiltIns: 'usage',
-      corejs: {version: '3.13', proposals: true}
+      corejs: { version: 3, proposals: true }
     }
   ],
   '@babel/preset-react'
 ];
 
 const plugins = [
-  ['@babel/plugin-proposal-decorators', {legacy: true}],
-  ['@babel/plugin-proposal-private-methods', {loose: true}]
+  ['@babel/plugin-proposal-decorators', { legacy: true }],
+  ['@babel/plugin-proposal-private-methods', { loose: true }]
 ];
 
-module.exports = {presets, plugins};
+module.exports = { presets, plugins };

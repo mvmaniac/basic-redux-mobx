@@ -2,7 +2,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "es2021": true
+    "es2022": true
   },
   "extends": ["airbnb", "airbnb/hooks", "prettier"],
   "globals": {
@@ -14,22 +14,12 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2021,
-    "sourceType": "module",
-    "babelOptions": {
-      "configFile": "./babel.config.js"
-    }
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
   "plugins": ["import", "jsx-a11y", "react", "react-hooks"],
   "rules": {
     "no-unused-vars": ["warn"],
-    "no-underscore-dangle": ["warn"],
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "import/no-extraneous-dependencies": ["warn"]
+    "no-underscore-dangle": ["warn"]
   }
 }
