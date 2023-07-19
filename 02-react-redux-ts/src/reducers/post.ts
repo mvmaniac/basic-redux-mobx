@@ -1,4 +1,4 @@
-import produce from 'immer';
+import { produce } from 'immer';
 import { ADD_POST, AddPostAction } from '../types/post';
 
 const initialState: string[] = [];
