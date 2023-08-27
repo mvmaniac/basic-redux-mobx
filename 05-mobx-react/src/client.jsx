@@ -11,5 +11,5 @@ root.render(
     <StoreProvider>
       <AppHooks />
     </StoreProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

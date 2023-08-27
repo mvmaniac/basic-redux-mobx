@@ -13,11 +13,11 @@ let config = {
   devtool: process.env.NODE_ENV ? 'hidden-source-map' : 'eval-cheap-source-map',
 
   resolve: {
-    extensions: ['.jsx', '.js']
+    extensions: ['.jsx', '.js'],
   },
 
   entry: {
-    app: './src/client'
+    app: './src/client',
   },
 
   module: {
@@ -29,29 +29,29 @@ let config = {
           {
             loader: 'babel-loader',
             options: {
-              plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean)
-            }
-          }
-        ]
-      }
-    ]
+              plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean),
+            },
+          },
+        ],
+      },
+    ],
   },
 
   plugins: [
     new CleanWebpackPlugin(),
     new ESLintPlugin({
-      extensions: ['.jsx', '.js']
+      extensions: ['.jsx', '.js'],
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+    }),
   ],
 
   output: {
     publicPath: '/',
     path: path.join(__dirname, './dist'),
-    filename: '[name].js'
-  }
+    filename: '[name].js',
+  },
 };
 
 if (!isDevelopment) {
@@ -63,7 +63,7 @@ if (!isDevelopment) {
     ...config,
     devServer: {
       static: {
-        directory: path.join(__dirname, './src')
+        directory: path.join(__dirname, './src'),
       },
       port: 8080,
       hot: true,
@@ -71,13 +71,13 @@ if (!isDevelopment) {
       client: {
         overlay: {
           errors: true,
-          warnings: false
-        }
+          warnings: false,
+        },
       },
       devMiddleware: {
-        publicPath: '/'
-      }
-    }
+        publicPath: '/',
+      },
+    },
   };
 }
 

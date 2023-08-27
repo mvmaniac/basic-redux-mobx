@@ -3,7 +3,7 @@ const { observable, autorun, reaction, action, runInAction } = require('mobx');
 const state = observable({
   compA: 'A',
   compB: 10,
-  compC: null
+  compC: null,
 });
 
 autorun(() => {
@@ -14,7 +14,7 @@ reaction(
   () => state.compB,
   () => {
     console.log('reaction change compB');
-  }
+  },
 );
 
 const change = action(() => {

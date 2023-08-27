@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { addPost } from '../actions/post';
 
 const initialState = {
-  data: []
+  data: [],
 };
 
 const postSlice = createSlice({
@@ -32,12 +32,12 @@ const postSlice = createSlice({
         (state) => {
           const draft = state;
           draft.isLoading = true;
-        }
+        },
       )
 
       .addDefaultCase((state, action) => {
         // switch문의 default 같은 역할
-      })
+      }),
 });
 
 export default postSlice;

@@ -10,7 +10,7 @@ class AppClass extends Component {
     super();
     this.state = observable({
       name: '',
-      password: ''
+      password: '',
     });
   }
 
@@ -18,7 +18,7 @@ class AppClass extends Component {
     const { name, password } = this.state;
     userStore.logIn({
       name,
-      password
+      password,
     });
   };
 

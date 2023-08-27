@@ -16,14 +16,14 @@ class AppClass extends Component<Record<string, unknown>, State> {
     super(props);
     this.state = observable({
       name: '',
-      password: ''
+      password: '',
     });
   }
 
   onLogin = (): void => {
     userStore.logIn({
       nickname: 'dev',
-      password: '1234'
+      password: '1234',
     });
   };
 

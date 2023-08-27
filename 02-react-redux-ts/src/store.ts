@@ -4,7 +4,7 @@ import {
   Dispatch,
   AnyAction,
   compose,
-  applyMiddleware
+  applyMiddleware,
 } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer, { RootState } from './reducers';
@@ -12,9 +12,9 @@ import reducer, { RootState } from './reducers';
 const initialState: RootState = {
   userReducer: {
     isLoggingIn: false,
-    data: null
+    data: null,
   },
-  postReducer: []
+  postReducer: [],
 };
 
 const firstMiddleware =

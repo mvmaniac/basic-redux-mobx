@@ -2,7 +2,7 @@ import { produce } from 'immer';
 
 const initialState = {
   isLoggingIn: false,
-  data: null
+  data: null,
 };
 
 // eslint-disable-next-line default-param-last

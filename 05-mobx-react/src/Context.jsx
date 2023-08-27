@@ -3,7 +3,7 @@ import { userStore, postStore } from './store';
 
 export const storeContext = React.createContext({
   userStore,
-  postStore
+  postStore,
 });
 
 // eslint-disable-next-line react/prop-types

@@ -5,9 +5,9 @@ import reducer from './reducers';
 const initialState = {
   userReducer: {
     isLoggingIn: false,
-    data: null
+    data: null,
   },
-  postReducer: []
+  postReducer: [],
 };
 
 const firstMiddleware = (store) => (next) => (action) => {

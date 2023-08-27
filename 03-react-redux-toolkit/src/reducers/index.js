@@ -5,5 +5,5 @@ import postSlice from './post';
 
 export default combineReducers({
   userReducer: userSlice.reducer,
-  postReducer: postSlice.reducer
+  postReducer: postSlice.reducer,
 });

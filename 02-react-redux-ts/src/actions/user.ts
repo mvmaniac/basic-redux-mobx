@@ -9,23 +9,23 @@ import {
   LOG_IN_FAILURE,
   LOG_IN_REQUEST,
   LOG_IN_SUCCESS,
-  LOG_OUT
+  LOG_OUT,
 } from '../types/user';
 import { addPost } from './post';
 
 const logInRequest = (data: LogInRequest): LogInRequestAction => ({
   type: LOG_IN_REQUEST,
-  data
+  data,
 });
 
 const logInSuccess = (data: LogInSuccess): LogInSuccessAction => ({
   type: LOG_IN_SUCCESS,
-  data
+  data,
 });
 
 const logInFailure = (error: Error): LogInFailureAction => ({
   type: LOG_IN_FAILURE,
-  error
+  error,
 });
 
 export const logIn = (data: LogInRequest): ThunkAction =>
@@ -41,17 +41,17 @@ export const logIn = (data: LogInRequest): ThunkAction =>
           dispatch(
             logInSuccess({
               userId: 1,
-              nickname: 'dev'
-            })
+              nickname: 'dev',
+            }),
           );
           dispatch(addPost(''));
         }, 2000);
       } catch (error) {
         dispatch(logInFailure(error as Error));
       }
-    }
+    },
   });
 
 export const logOut = (): LogOutAction => ({
-  type: LOG_OUT
+  type: LOG_OUT,
 });

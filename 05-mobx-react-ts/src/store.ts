@@ -5,7 +5,7 @@ const postStore = observable<PostStore>({
   data: [],
   addPost: action((data: string) => {
     postStore.data.push(data);
-  })
+  }),
 });
 
 const userStore = observable<UserStore>({
@@ -21,7 +21,7 @@ const userStore = observable<UserStore>({
   }),
   logOut: action(() => {
     userStore.data = null;
-  })
+  }),
 });
 
 export { userStore, postStore };

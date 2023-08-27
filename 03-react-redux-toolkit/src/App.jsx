@@ -9,7 +9,7 @@ import userSlice from './reducers/user';
 
 const priceSelector = (state) => state.userReducer.prices;
 const sumPriceSelector = createSelector(priceSelector, (prices) =>
-  prices.reduce((a, c) => a + c, 0)
+  prices.reduce((a, c) => a + c, 0),
 );
 
 // 아래처럼 커링을 사용해서 dispatch 의존성을 없애고 순수함수로 만들 수 있음
@@ -17,8 +17,8 @@ const outside = (dispatch) => () => {
   dispatch(
     logIn({
       id: 'dev',
-      password: '비밀번호'
-    })
+      password: '비밀번호',
+    }),
   );
 };
 
@@ -52,8 +52,8 @@ function App() {
     dispatch(
       logIn({
         id: 'dev',
-        password: '비밀번호'
-      })
+        password: '비밀번호',
+      }),
     );
   }, [dispatch]);
 

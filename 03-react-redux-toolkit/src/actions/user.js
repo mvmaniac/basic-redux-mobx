@@ -16,7 +16,7 @@ const logIn = createAsyncThunk('user/logIn', async (data, thunkAPI) => {
   // 여기서는 try ~ catch를 안 잡아도 됨...
   const result = await delay(500, {
     userId: 1,
-    nickname: 'dev'
+    nickname: 'dev',
   });
 
   return result;

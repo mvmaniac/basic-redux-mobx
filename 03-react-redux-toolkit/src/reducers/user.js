@@ -7,7 +7,7 @@ const initialState = {
   data: null,
   prices: Array(100)
     .fill()
-    .map((value, index) => (index + 1) * 100)
+    .map((value, index) => (index + 1) * 100),
 };
 
 const userSlice = createSlice({
@@ -19,7 +19,7 @@ const userSlice = createSlice({
       // immer가 자동 적용되어 있음
       const draft = state;
       draft.data = null;
-    }
+    },
   },
   // 비동기, 외부적인 코드
   extraReducers: {
@@ -46,8 +46,8 @@ const userSlice = createSlice({
       const draft = state;
       draft.data = null;
       draft.isLoggingIn = false;
-    }
-  }
+    },
+  },
 });
 
 export default userSlice;

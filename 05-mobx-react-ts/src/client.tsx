@@ -6,7 +6,7 @@ import AppHooks from './AppHooks';
 import StoreProvider from './Context';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLDivElement
+  document.getElementById('root') as HTMLDivElement,
 );
 
 root.render(
@@ -14,5 +14,5 @@ root.render(
     <StoreProvider>
       <AppHooks />
     </StoreProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -5,18 +5,18 @@ import {
   LOG_IN_SUCCESS,
   LOG_OUT,
   UserReducerAction,
-  UserState
+  UserState,
 } from '../types/user';
 
 const initialState: UserState = {
   isLoggingIn: false,
-  data: null
+  data: null,
 };
 
 const userReducer = (
   // eslint-disable-next-line @typescript-eslint/default-param-last
   prevState = initialState,
-  action: UserReducerAction
+  action: UserReducerAction,
 ): UserState =>
   produce(prevState, (draftState) => {
     switch (action.type) {

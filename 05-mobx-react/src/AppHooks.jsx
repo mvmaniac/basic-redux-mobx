@@ -12,13 +12,13 @@ const AppHooks = () => {
     },
     onChangePassword(event) {
       this.password = event.target.value;
-    }
+    },
   }));
 
   const onLogin = useCallback(() => {
     userStore.logIn({
       name: state.name,
-      password: state.password
+      password: state.password,
     });
   }, [state.name, state.password]);
 

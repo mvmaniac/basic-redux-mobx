@@ -13,11 +13,11 @@ const baseConfig: Configuration = {
   devtool: process.env.NODE_ENV ? 'hidden-source-map' : 'eval-cheap-source-map',
 
   resolve: {
-    extensions: ['.jsx', '.js', '.tsx', '.ts']
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
   },
 
   entry: {
-    app: './src/client'
+    app: './src/client',
   },
 
   module: {
@@ -29,27 +29,27 @@ const baseConfig: Configuration = {
           {
             loader: 'babel-loader',
             options: {
-              plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean)
-            }
-          }
-        ]
-      }
-    ]
+              plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean),
+            },
+          },
+        ],
+      },
+    ],
   },
 
   plugins: [
     new CleanWebpackPlugin.CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
-    new ForkTsCheckerWebpackPlugin()
+    new ForkTsCheckerWebpackPlugin(),
   ],
 
   output: {
     publicPath: '/',
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
-  }
+    filename: '[name].js',
+  },
 };
 
 let config;
@@ -63,7 +63,7 @@ if (!isDevelopment) {
     ...baseConfig,
     devServer: {
       static: {
-        directory: path.join(__dirname, './src')
+        directory: path.join(__dirname, './src'),
       },
       port: 8080,
       hot: true,
@@ -71,13 +71,13 @@ if (!isDevelopment) {
       client: {
         overlay: {
           errors: true,
-          warnings: false
-        }
+          warnings: false,
+        },
       },
       devMiddleware: {
-        publicPath: '/'
-      }
-    }
+        publicPath: '/',
+      },
+    },
   };
 }
 

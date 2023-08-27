@@ -14,8 +14,8 @@ function App(): JSX.Element {
     dispatch(
       logIn({
         id: 'dev',
-        password: '비밀번호'
-      })
+        password: '비밀번호',
+      }),
     );
   }, [dispatch]);
 

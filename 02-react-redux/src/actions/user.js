@@ -1,16 +1,16 @@
 const logInRequest = (data) => ({
   type: 'LOG_IN_REQUEST',
-  data
+  data,
 });
 
 const logInSuccess = (data) => ({
   type: 'LOG_IN_SUCCESS',
-  data
+  data,
 });
 
 const logInFailure = (error) => ({
   type: 'LOG_IN_FAILURE',
-  error
+  error,
 });
 
 const logIn =
@@ -24,8 +24,8 @@ const logIn =
         dispatch(
           logInSuccess({
             userId: 1,
-            nickname: 'dev'
-          })
+            nickname: 'dev',
+          }),
         );
       }, 2000);
       // axios.post().then().catch()으로 나중에 대체
@@ -34,7 +34,7 @@ const logIn =
     }
   };
 const logOut = () => ({
-  type: 'LOG_OUT'
+  type: 'LOG_OUT',
 });
 
 export { logIn, logOut };

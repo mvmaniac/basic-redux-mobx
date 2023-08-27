@@ -6,7 +6,7 @@ const initialState: string[] = [];
 const postReducer = (
   // eslint-disable-next-line @typescript-eslint/default-param-last
   prevState = initialState,
-  action: AddPostAction
+  action: AddPostAction,
 ): string[] =>
   produce(prevState, (draftStatus) => {
     switch (action.type) {

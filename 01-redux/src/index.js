@@ -5,17 +5,17 @@ const reducer = (prevState, action) => {
     case 'CHANGE_COMP_A':
       return {
         ...prevState,
-        compA: action.data
+        compA: action.data,
       };
     case 'CHANGE_COMP_B':
       return {
         ...prevState,
-        compB: action.data
+        compB: action.data,
       };
     case 'CHANGE_COMP_C':
       return {
         ...prevState,
-        compC: action.data
+        compC: action.data,
       };
     default:
       return prevState;
@@ -25,7 +25,7 @@ const reducer = (prevState, action) => {
 const initialState = {
   compA: 'a',
   compB: 10,
-  compC: null
+  compC: null,
 };
 
 // store

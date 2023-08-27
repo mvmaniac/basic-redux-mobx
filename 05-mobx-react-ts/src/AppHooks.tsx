@@ -21,23 +21,23 @@ const AppHooks = (): JSX.Element => {
       // eslint-disable-next-line prefer-arrow-callback
       function (
         this: LocalStore,
-        event: React.ChangeEvent<HTMLInputElement>
+        event: React.ChangeEvent<HTMLInputElement>,
       ): void {
         state.name = event.target.value;
-      }
+      },
     ),
     onChangePassword: action(
       // eslint-disable-next-line prefer-arrow-callback
       function (this: LocalStore, event: React.ChangeEvent<HTMLInputElement>) {
         state.password = event.target.value;
-      }
-    )
+      },
+    ),
   }));
 
   const onLogin = useCallback(() => {
     userStore.logIn({
       nickname: state.name,
-      password: state.password
+      password: state.password,
     });
   }, [state.name, state.password]);
 
